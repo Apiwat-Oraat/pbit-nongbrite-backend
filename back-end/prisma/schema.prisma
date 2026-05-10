@@ -1,0 +1,141 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+
+  username     String   @unique
+  email        String   @unique
+  password     String
+  name         String?
+  age          Int?
+  gender       Gender?
+
+  resetPin     String?
+  resetExpire  DateTime?
+
+  role         Role     @default(USER)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // relations
+  profile      Profile?
+  ranking      Ranking?
+  playerState  PlayerState?
+  progress     GameProgress[]
+}
+
+// =============================================
+// GameLevel: รวม Chapter + Level
+// =============================================
+model GameLevel {
+  id         Int      @id @default(autoincrement())
+  chapterNo  Int
+  levelNo    Int
+  title      Json
+  desc       Json?
+  images     Json?
+  difficulty Int      @default(1)
+  maxStars   Int      @default(3)
+  maxScore   Int      @default(100)
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  progress GameProgress[]
+
+  @@unique([chapterNo, levelNo])
+  @@index([chapterNo])
+}
+
+// =============================================
+// GameProgress: รวม LevelCompletion + GamePlayHistory
+// =============================================
+model GameProgress {
+  id       Int      @id @default(autoincrement())
+  userId   Int
+  levelId  Int
+  score    Int      @default(0)
+  stars    Int      @default(0)
+  playTime Int      @default(0)
+  isBest   Boolean  @default(false)
+  attempts Int      @default(1)
+  playedAt DateTime @default(now())
+
+  user  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  level GameLevel @relation(fields: [levelId], references: [id], onDelete: Cascade)
+
+  @@index([userId, levelId, playedAt(sort: Desc)])
+  @@index([userId, isBest])
+}
+
+// =============================================
+// PlayerState: รวม UserStats + Life + Streak
+// =============================================
+model PlayerState {
+  id             Int       @id @default(autoincrement())
+  userId         Int       @unique
+
+  // Stats
+  totalScore     Int       @default(0)
+  totalStars     Int       @default(0)
+
+  // Life
+  lifeCurrent    Int       @default(5)
+  lifeMax        Int       @default(5)
+  lastLifeReset  DateTime  @default(now())
+
+  // Streak
+  streakCurrent  Int       @default(0)
+  streakLongest  Int       @default(0)
+  lastActiveDate DateTime?
+
+  updatedAt      DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([totalScore(sort: Desc)])
+  @@index([totalStars(sort: Desc)])
+}
+
+model Profile {
+  id              Int      @id @default(autoincrement())
+  userId          Int      @unique
+  playerName      String?
+  icon            String?
+  currentRank     Int?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Ranking {
+  id          Int      @id @default(autoincrement())
+  userId      Int      @unique
+  rank        Int
+  points      Int
+  lastUpdated DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([rank])
+  @@index([points(sort: Desc)])
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+}
+
+enum Role {
+  USER
+  ADMIN
+}
