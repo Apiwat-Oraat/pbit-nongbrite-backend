@@ -2,7 +2,8 @@
 
 > Backend setup ล่าสุดอยู่ที่ [BACKEND_INSTALLATION.md](./BACKEND_INSTALLATION.md)
 
-> 🚧 **สถานะ**: โครงการกำลังอยู่ระหว่างการพัฒนา (WIP) — ฟีเจอร์บางส่วนอาจมีแก่ไขเพิ่มเติ่ม
+## TechStack
+<img width="1154" height="512" alt="tech stack diagram drawio" src="https://github.com/user-attachments/assets/273d0d3a-735d-48a1-8a6b-eb1faf87e199" />
 
 ## 🎯 Concept
 
