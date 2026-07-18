@@ -1,4 +1,9 @@
 # P'Bit Nong'Brite Learning Platform
+## 💼 Repository นี้จัดทำขึ้นเพื่อเป็น Portfolio
+
+Repository นี้เปิดเป็น **Public** เพื่อใช้เป็นผลงาน (Portfolio Project) สำหรับแสดงทักษะด้านการพัฒนาซอฟต์แวร์ และเป็นพื้นที่สำหรับฝึกฝน พัฒนา และทดลองการใช้งานเทคโนโลยีต่าง ๆ ที่เกี่ยวข้องกับการพัฒนา Backend
+
+โปรเจกต์นี้จัดทำขึ้นเพื่อฝึกกระบวนการพัฒนาซอฟต์แวร์ตั้งแต่การวิเคราะห์ความต้องการ ออกแบบฐานข้อมูล ออกแบบ RESTful API พัฒนาระบบ Authentication 
 
 > Backend setup ล่าสุดอยู่ที่ [BACKEND_INSTALLATION.md](./BACKEND_INSTALLATION.md)
 
