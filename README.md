@@ -25,6 +25,68 @@ Repository นี้เปิดเป็น **Public** เพื่อใช้
 - **เกมเพลย์ (GamePlayHistory + LevelCompletion)** เก็บทุกครั้งที่เล่น รวมถึง best score/best time
 - **Gamification Layer**: lives, streaks, achievements, icons, ranking ช่วยเพิ่ม retention
 
+## 🖼️ Screenshots
+
+### หน้าหลักและบัญชีผู้ใช้
+
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="screenshort/landingpage.png" alt="Landing page" /><br/><b>Landing</b></td>
+    <td align="center" width="50%"><img src="screenshort/loginpage.png" alt="Login page" /><br/><b>Login</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshort/registerpage.png" alt="Register page" /><br/><b>Register</b></td>
+    <td align="center"><img src="screenshort/profilepage.png" alt="Profile page" /><br/><b>Profile</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshort/editprofile.png" alt="Edit profile" /><br/><b>Edit Profile</b></td>
+    <td align="center"><img src="screenshort/settingpage.png" alt="Settings page" /><br/><b>Settings</b></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><img src="screenshort/rankingpage.png" alt="Ranking page" width="70%" /><br/><b>Ranking</b></td>
+  </tr>
+</table>
+
+### บทเรียน (Courses)
+
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="screenshort/courses-page1.png" alt="เกมการนำทาง" /><br/><b>เกมการนำทาง</b></td>
+    <td align="center" width="50%"><img src="screenshort/courses-page2.png" alt="นับจำนวนและจัดหมวดหมู่สิ่งของ" /><br/><b>นับจำนวนและจัดหมวดหมู่สิ่งของ</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshort/courses-page3.png" alt="จับคู่ตามเงื่อนไขที่กำหนด" /><br/><b>จับคู่ตามเงื่อนไขที่กำหนด</b></td>
+    <td align="center"><img src="screenshort/courses-page4.png" alt="เรียงลำดับขั้นตอน" /><br/><b>เรียงลำดับขั้นตอน</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshort/courses-page5.png" alt="ค้นน้ำผลไม้ให้เพื่อนๆ" /><br/><b>ค้นน้ำผลไม้ให้เพื่อนๆ</b></td>
+    <td align="center"><img src="screenshort/courses-page6.png" alt="จับคู่ผลไม้ในตารางสี่เหลี่ยม" /><br/><b>จับคู่ผลไม้ในตารางสี่เหลี่ยม</b></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><img src="screenshort/courses-page7.png" alt="ระบายสีตามตารางพิกัด" width="70%" /><br/><b>ระบายสีตามตารางพิกัด</b></td>
+  </tr>
+</table>
+
+### เกมเพลย์ (Gameplay)
+
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="screenshort/UI-game-path-navigation.png" alt="Path navigation" /><br/><b>Path Navigation</b></td>
+    <td align="center" width="50%"><img src="screenshort/UI-game-counting-classificaltion.png" alt="Counting and classification" /><br/><b>Counting & Classification</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshort/UI-game-conditional-matching.png" alt="Conditional matching" /><br/><b>Conditional Matching</b></td>
+    <td align="center"><img src="screenshort/UI-game-sequencing.png" alt="Sequencing" /><br/><b>Sequencing</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshort/UI-game-step-counting.png" alt="Step counting" /><br/><b>Step Counting</b></td>
+    <td align="center"><img src="screenshort/UI-game-fruit-matching-grid.png" alt="Fruit matching grid" /><br/><b>Fruit Matching Grid</b></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><img src="screenshort/UI-game-grid-based-color.png" alt="Grid-based color" width="70%" /><br/><b>Grid-based Color</b></td>
+  </tr>
+</table>
+
 ## 🛣️ API Structure (`/api/v1`)
 
 ### Health Check
